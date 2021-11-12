@@ -1,0 +1,17 @@
+h1 {
+        @include marginPadding();
+        font-weight: 200;
+        font-size: rem(40)!important;
+        letter-spacing: rem(6);
+        text-transform: uppercase;
+        text-align: center;
+}
+
+h2 {
+        @include marginPadding();
+        font-weight: 200;
+        font-size: rem(30)!important;
+        letter-spacing: rem(4);
+        text-transform: uppercase;
+        text-align: center; 
+}

@@ -1,0 +1,201 @@
+article {
+    grid-area: article;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .margin {     
+        margin: 150px 100px 50px 100px;
+        &:nth-child(2) {
+            margin: 0 100px;
+        }
+    }
+    .photo {
+        width: 100%;
+        height: 100vh;
+        background: url('../img/ring.jpg') center / cover fixed;
+        &__bg {    
+            @include setFlex();
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            @include setFlex();
+            @include marginPadding();
+            flex-wrap: wrap;
+            padding: rem(120);
+            color: var(--mainBrown);
+        }
+            
+        i {
+            @include setFlex(center, flex-start);
+            font-size: rem(30);
+            width: rem(200);
+            height: rem(200);
+            color: var(--mainBeige);
+            opacity: 0;
+            text-shadow: 1px 1px var(--mainBlack);
+            cursor: pointer;
+            @keyframes animateArrow {
+                0% {
+                    transform: translateY(-80px);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(80px);
+                    opacity: 0;
+                }
+            }
+        }
+
+        &__text {
+            margin-right: rem(15);
+            font-size: rem(30);
+            color: var(--mainBeige);
+            letter-spacing: rem(10);
+            text-shadow: 1px 1px var(--mainBlack);
+            opacity: 0;
+            @keyframes fadeInText {
+                100% {
+                    opacity: 1;
+                }
+            }           
+        }
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+        flex-wrap: wrap;
+        gap: 100px;
+        align-items: center;
+        grid-auto-flow: dense;
+        color: var(--mainBlack);
+        background-color: var(--mainBeige);
+        height: 100vh;
+        max-height: 900px;
+        padding: 100px 0;
+        .right {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 100%;
+            background: url('../img/shoes.jpg');
+            background-size: cover;
+            box-shadow: var(--mainBoxShadow); 
+        }
+    }
+    .left {
+        @include setFlex(space-evenly);
+        flex-direction: column;
+        height: 100%;
+        min-width: 300px;
+        max-width: 500px;
+        gap: 10px;
+        grid-row: span 2;
+        color: var(--mainBeige);
+        font-weight: 200;
+        background-color: var(--mainBrown);
+        box-shadow: var(--mainBoxShadow); 
+        &.mobile{
+            grid-column: span 2;
+            background: url('../img/shoes.jpg') center / cover fixed;        
+            color: var(--mainBeige);
+        }
+        &__content {
+            @include setFlex(space-evenly);
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            p {
+                @include marginPadding();
+                flex-direction: column;
+                text-align: center;
+                line-height: 2;
+                font-size: 100%;
+                padding: 0 10px;
+                font-style: italic;
+            }
+        }
+    }
+    .quote {
+        color: var(--mainGray);
+        background-color: var(--mainBeige);
+        height: 100%;
+        p {
+            @include setFlex();
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            q {
+                font-size: 250%;
+            }
+            q::before {
+                content: "“";
+            }
+            q::after {
+                content: "”";
+            }
+            cite {
+                margin-top: 50px;
+                font-size: 120%;
+                color: var(--mainBrown);
+            }
+            
+        }
+    }
+    
+    .photo2 {
+            @extend .photo;
+            height: 80vh;
+            background: url('../img/weedingw.jpg') center / cover fixed;
+            box-shadow: var(--mainBoxShadow);
+            .left {
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                max-width: none;
+                p {     
+                    color: var(--mainBeige);
+                }
+            }
+            &:hover .left {
+                display: flex;
+            }    
+            &.mobile {
+                .left {
+                    display: flex;
+                    &__content {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
+                }  
+            }
+    }
+    
+    @media all and (max-width: 1023px){
+        .margin{
+            margin: 150px 30px 50px 30px!important;
+            &:nth-child(2) {
+                margin: 0 30px!important;
+            }
+        }
+        .left__content {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .left.mobile { 
+            max-width: none;
+        }
+    }
+
+    @media all and (max-width: 426px){
+        .margin{
+            margin: 150px 10px 50px 10px!important;
+            &:nth-child(2) {
+                margin: 0 10px!important;
+            }
+        }
+    }
+
+}

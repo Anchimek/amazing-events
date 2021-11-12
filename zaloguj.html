@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="keywords" content="organizacja, imprez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Title" content="Amazing events - organizacja imprez">
+    <title>Amazing events - organizacja imprez</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Source+Serif+Pro:wght@200;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="wrapper">
+       
+        <header>
+             <div id="header">
+                <div id="logo">
+                     <img src="./img/logo.png" alt="logostrony" id="logo__img" /> 
+                     <a href="./index.html" ><span id="logo__text"> Amazing Events </span> </a> 
+                </div>
+                
+                <nav>
+                    <button class="burger">
+                        <div class="bar"></div>
+                    </button>
+
+                    <ul class="main-nav">
+                        <li><a href="./zaloguj.html" class="login"><i class="icon-user-circle"></i> Zaloguj</li></a>
+                        <li><a href="./index.html" class="brown">Strona główna</li></a>
+                        <li><a href="./uslugi.html">Usługi</li></a>
+                        <li><a href="./partnerzy.html">Partnerzy</li></a>
+                        <li><a href="./galeria.html">Galeria</li></a>
+                        <li><a href="./kontakt.html">Kontakt</li></a>
+                    </ul>
+                </nav>
+            </div> 
+        </header>
+
+        <article class="login">
+
+            <section class="section__login">
+                <div class="login">
+                        <div class="area__login">
+
+                            <h1>Zaloguj się</h1>
+
+                            <input type="email" placeholder="example@gmail.com" name="login" id="login" required autofocus>
+                            <input type="password" placeholder="password" name="password" id="password" required>
+
+                            <button>Zaloguj</button>
+
+                            <div class="remember"> 
+                                <input type="checkbox" name="remember" id="remember" />
+                                <label for="remember">Zapamiętać hasło?</label>
+                                <a href="#">Zapomniałeś hasła?</a>
+                            </div>
+
+                        </div>
+                        
+                </div>
+                
+            </section>           
+        </article>         
+    </div> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/burger.js"></script>
+</body>
+</html>

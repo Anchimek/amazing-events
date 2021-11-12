@@ -1,0 +1,79 @@
+section.margin__partners {
+    margin: 50px 20px 50px 20px;
+    .partners__container {
+        
+        h1 {
+            color: var(--mainBrown);
+            margin-bottom: 130px;
+        }
+        ul {
+            @include setFlex(space-around);
+            @include marginPadding();
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin-bottom: 200px;
+            gap: 100px;
+            li:nth-child(1) {
+                .partners__img{
+                background: url('../img/Google-Fonts-Logo.png') center / cover;}
+            }
+            li:nth-child(2) {
+                .partners__img{
+                background: url('../img/fontello.png') center / cover;}
+            }
+            li:nth-child(3) {
+                .partners__img{
+                background: url('../img/freepik.png') center / cover;}
+            }
+        }
+    }
+}
+
+.partners {
+    @include setFlex(space-between);
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    
+    &__img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        transition: all .5s;
+        transform: rotateY(0);
+        box-shadow: var(--mainBoxShadow);
+        &__bg {
+            @include setFlex();
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--mainBrown);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            transform: rotateY(-180deg);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s linear;
+            h2 {
+                font-size: rem(13)!important;
+                color: var(--mainBeige);
+            }
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .partners__img {
+            transition: transform .5s;
+            transform: rotateY(-180deg);
+        }
+        .partners__img__bg{
+            visibility: visible;
+            transition: transform .5s;
+            transform: rotateY(0);
+            animation: opacity .2s linear;
+            opacity: 1;
+        }
+    }
+}
+

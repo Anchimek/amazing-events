@@ -1,0 +1,12 @@
+In this project I used HTML, CSS, JS without framework. 
+I applied:
+-semantic tags in HTML for cuter code and better positioning, 
+-preprocessor SASS, 
+-animations, 
+-media queries,
+-keyframes,
+-gsap,
+-Intersection Observer API,
+-and much much more.
+
+I used also images from freepik.com, fonts from fonts.google.com and icons from fontello.com.

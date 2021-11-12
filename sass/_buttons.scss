@@ -1,0 +1,19 @@
+button, input {
+    @include setFlex();
+    font-family: 'Lato', sans-serif;
+    width: rem(250);
+    height: 5vh;
+    font-size: 100%;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 1px solid var(--mainBeige);
+    border-radius: rem(1);
+    color: var(--mainBeige);
+    background: none;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--mainBeige);
+        color: var(--mainBrown);
+    }
+}

@@ -1,0 +1,161 @@
+header {
+    grid-area: navbar;  
+    background-color: var(--mainBeige);
+    height: rem(100);
+    box-shadow:
+    0 rem(2) rem(10) rgba(0, 0, 0, 0.22);
+    z-index: 999;
+
+    #header {
+        @include setFlex();
+        height: 100%;
+        width: 100vw;
+        font-weight: 400;
+        flex-basis: 25%;
+
+        #logo {  
+                @include setFlex();
+                height: 100%;
+                width: rem(250);
+                text-transform: uppercase;
+                margin-left: rem(30);   
+                &__text {
+                    @include setFlex(flex-start);
+                    font-size: rem(22);
+                    height: rem(40);
+                    width: 100%;
+                    min-width: rem(200);
+                    font-weight: 200;
+                    color: var(--mainGray);   
+                }
+
+                &__img {
+                    width: rem(40);
+                    height: rem(40);
+                }   
+
+                &:hover {
+                    cursor: pointer;     
+                }               
+        }
+    
+    }
+
+    .main-nav {
+        @include setFlex();
+        height: 100%;
+        width: 100%;
+        margin: 0 rem(50) 0 0;  
+        list-style-type: none;
+        transition: .5s;
+        
+        .login {          
+            width: 100%;
+            height: 100%; 
+            color: var(--mainBrown); 
+
+            &:hover {
+                cursor: pointer;     
+            }       
+        }
+
+        li {
+            min-width: fit-content;
+            padding: rem(20);  
+            &:first-of-type {
+                width: 100%;
+            }   
+            a {
+                color: var(--mainGray);
+                text-decoration: none;
+                font-size: rem(12);
+                &:hover {
+                    cursor: pointer;   
+                    color: var(--mainBrown);  
+                }
+                &.brown {
+                    color: var(--mainBrown);
+                }      
+            }  
+             
+            }
+        
+    }
+
+    .main-nav.is-active {
+        @include marginPadding();
+        left: 0;
+        opacity: 1;      
+    }
+
+    nav {
+        @include setFlex();
+        flex-basis: 75%;
+        .burger {
+            display: none;
+            
+            & div, &::after, &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: rem(3);
+                background-color: var(--mainBrown);
+                margin: rem(5) 0;
+                transition: .4s;
+            }
+        }
+        .burger.is-active .bar {
+            opacity: 0;
+        }
+        .burger.is-active::before{
+            transform: rotate(-45deg) translate(rem(-7), rem(6));
+        }  
+
+        .burger.is-active::after{
+            transform: rotate(45deg) translate(rem(-5), rem(-4));
+        }
+    }
+
+    @media all and (max-width: 1023px) { 
+        @include setFlex(); 
+
+        .main-nav {
+            @include setFlex(space-around);
+            flex-direction: column;
+            position: fixed;
+            top: rem(100);
+            left: 100%;
+            z-index: 1000;
+            opacity: 0;
+            width: 100%;  
+            height: 85%; 
+            background: var(--mainBeige);
+            border-top: rem(1) solid var(--mainBrown);
+            border-bottom: rem(1) solid var(--mainBrown);
+            li {
+                @include setFlex();
+                width: rem(200);
+                height: rem(50);
+                opacity: 0;
+            }
+            li:first-of-type, li:first-of-type a{
+                @include setFlex();
+            }   
+            li a {
+                color: var(--mainBrown);
+                font-size: rem(14);
+            }
+        }
+        nav .burger {
+            display: block;
+            width: rem(35);
+            height: rem(45);
+            cursor: pointer;
+            appearance: none;
+            background: none;
+            outline: none;
+            border: none;
+        }
+    }
+}
+       

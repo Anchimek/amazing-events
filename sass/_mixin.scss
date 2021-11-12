@@ -1,0 +1,10 @@
+@mixin setFlex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin marginPadding() {
+    margin: 0;
+    padding: 0;
+}
