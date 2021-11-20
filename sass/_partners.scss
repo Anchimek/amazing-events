@@ -61,7 +61,8 @@ section.margin__partners {
             }
         }
     }
-    &:hover {
+    &:hover,
+    &:focus {
         cursor: pointer;
         .partners__img {
             transition: transform .5s;

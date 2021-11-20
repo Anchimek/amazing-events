@@ -73,6 +73,9 @@ header {
                     cursor: pointer;   
                     color: var(--mainBrown);  
                 }
+                &:focus {
+                    color: var(--mainBrown);  
+                }
                 &.brown {
                     color: var(--mainBrown);
                 }      

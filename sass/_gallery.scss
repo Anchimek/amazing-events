@@ -71,12 +71,16 @@
                         cursor: pointer;
                         opacity: 1;
                     }
+                    &:focus {
+                        opacity: 1;
+                    }
                 }
                 .icon-heart-1 {
                     color: var(--mainRed);
                     opacity: 1;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: rgba(0, 0, 0, 0.5);  
                 }
                 &:hover i {
@@ -116,7 +120,8 @@
             margin-top: 40px;
             align-self: flex-end;
             cursor: pointer;
-            &::before, &::after {
+            &::before, 
+            &::after {
                 content: '';
                 display: block;
                 width: 15px;
@@ -155,7 +160,8 @@
                 border-left: 1px solid var(--mainBrown);
                 background-color: var(--mainBrown);
                 flex-basis: 30%;
-                &:hover {
+                &:hover,
+                &:focus {
                     color: var(--mainBrown);
                     background-color: var(--mainBeige);
                 }
@@ -170,6 +176,9 @@
                 font-size: 200%;
                 &:hover {
                     cursor: pointer;
+                    color: var(--mainGray);
+                }
+                &:focus {
                     color: var(--mainGray);
                 }
             }

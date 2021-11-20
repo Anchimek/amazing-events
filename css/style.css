@@ -151,6 +151,10 @@ header .main-nav li a:hover {
   color: var(--mainBrown);
 }
 
+header .main-nav li a:focus {
+  color: var(--mainBrown);
+}
+
 header .main-nav li a.brown {
   color: var(--mainBrown);
 }
@@ -648,6 +652,11 @@ button:hover, input:hover {
   color: var(--mainBrown);
 }
 
+button:focus, input:focus {
+  background-color: var(--mainBeige);
+  color: var(--mainBrown);
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,11 +900,7 @@ article.login .section__login .login .area__login input::placeholder {
   color: var(--mainBeige);
 }
 
-article.login .section__login .login .area__login input:focus {
-  color: var(--mainBeige);
-}
-
-article.login .section__login .login .area__login input:hover {
+article.login .section__login .login .area__login input:hover, article.login .section__login .login .area__login input:focus {
   color: var(--mainBeige);
 }
 
@@ -913,7 +918,7 @@ article.login .section__login .login .area__login button {
   margin-top: 100px;
 }
 
-article.login .section__login .login .area__login button:hover {
+article.login .section__login .login .area__login button:hover, article.login .section__login .login .area__login button:focus {
   color: var(--mainBrown);
 }
 
@@ -1184,6 +1189,16 @@ article.login .section__login .section__gallery .login .rectangle__gallery__hove
   opacity: 1;
 }
 
+.section__gallery .services .rectangle__gallery__hover .icon-heart-empty:focus, .section__gallery article.login .section__login .login .rectangle__gallery__hover .icon-heart-empty:focus, article.login .section__login .section__gallery .login .rectangle__gallery__hover .icon-heart-empty:focus,
+.section__gallery .services .rectangle__gallery__hover .icon-heart-1:focus,
+.section__gallery article.login .section__login .login .rectangle__gallery__hover .icon-heart-1:focus,
+article.login .section__login .section__gallery .login .rectangle__gallery__hover .icon-heart-1:focus,
+.section__gallery .services .rectangle__gallery__hover .icon-forward-outline:focus,
+.section__gallery article.login .section__login .login .rectangle__gallery__hover .icon-forward-outline:focus,
+article.login .section__login .section__gallery .login .rectangle__gallery__hover .icon-forward-outline:focus {
+  opacity: 1;
+}
+
 
 .section__gallery .services .rectangle__gallery__hover .icon-heart-1,
 .section__gallery article.login .section__login .login .rectangle__gallery__hover .icon-heart-1,
@@ -1192,7 +1207,7 @@ article.login .section__login .section__gallery .login .rectangle__gallery__hove
   opacity: 1;
 }
 
-.section__gallery .services .rectangle__gallery__hover:hover, .section__gallery article.login .section__login .login .rectangle__gallery__hover:hover, article.login .section__login .section__gallery .login .rectangle__gallery__hover:hover {
+.section__gallery .services .rectangle__gallery__hover:hover, .section__gallery article.login .section__login .login .rectangle__gallery__hover:hover, article.login .section__login .section__gallery .login .rectangle__gallery__hover:hover, .section__gallery .services .rectangle__gallery__hover:focus, .section__gallery article.login .section__login .login .rectangle__gallery__hover:focus, article.login .section__login .section__gallery .login .rectangle__gallery__hover:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1311,7 +1326,7 @@ article.login .section__login .section__gallery .login .rectangle__gallery__hove
       flex-basis: 30%;
 }
 
-.section__gallery .share .link button:hover {
+.section__gallery .share .link button:hover, .section__gallery .share .link button:focus {
   color: var(--mainBrown);
   background-color: var(--mainBeige);
 }
@@ -1337,6 +1352,10 @@ article.login .section__login .section__gallery .login .rectangle__gallery__hove
 
 .section__gallery .share .icons i:hover {
   cursor: pointer;
+  color: var(--mainGray);
+}
+
+.section__gallery .share .icons i:focus {
   color: var(--mainGray);
 }
 
@@ -1457,11 +1476,11 @@ section.margin__partners .partners__container ul li:nth-child(3) .partners__img 
   color: var(--mainBeige);
 }
 
-.partners:hover {
+.partners:hover, .partners:focus {
   cursor: pointer;
 }
 
-.partners:hover .partners__img {
+.partners:hover .partners__img, .partners:focus .partners__img {
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -1470,7 +1489,7 @@ section.margin__partners .partners__container ul li:nth-child(3) .partners__img 
           transform: rotateY(-180deg);
 }
 
-.partners:hover .partners__img__bg {
+.partners:hover .partners__img__bg, .partners:focus .partners__img__bg {
   visibility: visible;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;

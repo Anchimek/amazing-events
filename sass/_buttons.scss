@@ -16,4 +16,8 @@ button, input {
         background-color: var(--mainBeige);
         color: var(--mainBrown);
     }
+    &:focus {
+        background-color: var(--mainBeige);
+        color: var(--mainBrown);
+    }
 }

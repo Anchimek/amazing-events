@@ -33,10 +33,8 @@ article.login {
                 &::placeholder {
                     color: var(--mainBeige);
                 }
+                &:hover,
                 &:focus {
-                    color: var(--mainBeige);
-                }
-                &:hover {
                     color: var(--mainBeige);
                 }
                 &:-webkit-autofill {
@@ -51,7 +49,8 @@ article.login {
                 color: var(--mainBeige);
                 border: 1px solid var(--mainBeige);
                 margin-top: 100px;
-                &:hover {
+                &:hover,
+                &:focus {
                     color: var(--mainBrown);
                 }
             }
