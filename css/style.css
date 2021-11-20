@@ -790,6 +790,10 @@ footer .footer__socials i:hover {
   color: var(--mainGray);
 }
 
+footer .footer__socials i:focus {
+  color: var(--mainGray);
+}
+
 @media all and (max-width: 850px) {
   footer .footer {
     -webkit-box-orient: vertical;

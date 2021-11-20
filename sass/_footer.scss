@@ -48,6 +48,9 @@ footer {
                 cursor: pointer;
                 color: var(--mainGray);
             }
+            i:focus {
+                color: var(--mainGray);
+            }
         }
     } 
     @media all and (max-width: 850px) {
