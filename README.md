@@ -1,8 +1,8 @@
 # amazing-events
 
 First project with: 
--RWD
--Gsap
--ResizeObserver
+- RWD
+- Gsap
+- ResizeObserver
 
 https://anchimek.github.io/amazing-events/
